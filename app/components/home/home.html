@@ -1,8 +1,8 @@
 <md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
-	<img src="/assets/images/alor-holiday-resort-banner.jpg" class="header-image" flex="100" alt="page header">
+	<img src="assets/images/alor-holiday-resort-banner.jpg" class="header-image" flex="100" alt="page header">
 </md-whiteframe>
 
-<section layout="row">
+<section layout="row" class="md-whiteframe-z5">
 
 	<div flex="100" flex-gt-md="66" offset-gt-md="15" class="md-padding">
 
@@ -64,14 +64,47 @@
 	
 </section>
 
-<footer class="md-padding" layout="column" layout-gt-sm="row">
-	<div flex>
-		
+<footer layout="column" class="bg-grey-400 txt-grey-700 md-body-1">
+	<div layout="column" layout-gt-sm="row" flex>
+		<div flex class="md-padding" layout="column">
+			<div class="md-subhead">Links</div>
+			<div layout="column" layout-align="center start">
+				<md-button href="">About Us</md-button>
+				<md-button href="">Contact Us</md-button>
+			</div>
+		</div>
+		<div flex class="md-padding" layout="column">
+			<div class="md-subhead">Message Us</div>
+
+			<div layout="row" flex>
+				<md-input-container flex>
+				    <label>Your name</label>
+				    <input class="txt-white">
+			    </md-input-container>
+			    <md-input-container flex>
+				    <label>Your email</label>
+				    <input>
+			    </md-input-container>
+			</div>
+
+		    <md-input-container flex>
+		        <label>Message</label>
+		        <textarea columns="1" md-no-autogrow="true" ng-maxlength="100"></textarea>
+		    </md-input-container>
+
+		    <div layout layout-align="end center">
+		    	<md-button class="md-accent md-raised" aria-label="send">
+			        <md-icon md-svg-icon="/assets/bower_components/material-design-icons/content/svg/production/ic_send_48px.svg"></md-icon>
+			        send
+			    </md-button>
+		    </div>
+		</div>
+		<div flex class="md-padding">
+			<div class="md-subhead">Address</div>
+		</div>
 	</div>
-	<div flex>
-		
-	</div>
-	<div flex>
-		
+
+	<div class="md-padding" flex layout layout-align="center center">
+		<div class="md-caption">All Rights Reserved</div>
 	</div>
 </footer>

@@ -21,6 +21,7 @@
     "angular": "1.4.5",
     "angular-bootstrap": "~0.13.4",
     "angular-material": "~0.11.0",
+    "angular-messages": "1.4.5",
     "angular-ui-router": "~0.2.15",
     "bootstrap": "~3.3.5",
     "material-design-icons": "~2.0.0"

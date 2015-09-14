@@ -3,4 +3,4 @@
 *
 * Description
 */
-var app = angular.module('resortModule', ['ngMaterial','ui.router']);
+var app = angular.module('resortModule', ['ngMaterial','ui.router','ngMessages']);
