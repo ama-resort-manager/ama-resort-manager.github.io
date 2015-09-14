@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="resortModule">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Resort Manager</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/bower_components/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-controller="authController">
+    
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" ng-click="navbarCollapsed = !navbarCollapsed">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a href="#" class="navbar-brand" ng-click="navbarClose()">
+	        Resort Manager
+	      </a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div ng-if="!authenticated" class="collapse navbar-collapse" collapse="navbarCollapsed">
+	      <!-- your normal collapsable content here -->
+	      	<ul class="nav navbar-nav navbar-right">
+				<li><a href="#" ng-click="navbarClose">Login</a></li>
+				<li>&nbsp;&nbsp;</li>
+			</ul>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div ng-if="authenticated" class="collapse navbar-collapse" collapse="navbarCollapsed">
+	      <!-- your normal collapsable content here -->
+	      	<ul class="nav navbar-nav navbar-right">
+				
+			</ul>
+	    </div>
+	</nav>
+
+    <div class="clearfix" ui-view></div>
+
+    	<!-- angular -->
+	<script src="/assets/bower_components/angular/angular.min.js"></script>
+
+	<!-- angular plugins -->
+	<script src="/assets/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="/assets/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+	<!-- angular module -->
+	<script src="/app/resortModule.js"></script>
+
+	<!-- angular ui route -->
+	<script src="/app/routes.js"></script>
+
+	<!-- angular controllers -->
+	<script src="/app/components/auth/authController.js"></script>
+	<script src="/app/components/home/homeController.js"></script>
+</body>
+</html>
