@@ -1,0 +1,33 @@
+<section layout="row">
+
+	<div flex="100" flex-gt-md="66" offset-gt-md="15" class="md-padding" layout="column">
+
+		<h2 class="md-display-1">Creating New Site</h2>
+
+		<div layout="column" layout-gt-md="row">
+			
+			<div class="md-padding" flex flex-gt-md="33" layout="column">
+				<md-checkbox ng-disabled="true" aria-label="Disabled checked checkbox" ng-model="check1" ng-init="check1=true">
+		          Step 1: User Verification
+		        </md-checkbox>
+
+		        <md-checkbox ng-disabled="true" aria-label="Disabled checked checkbox" ng-model="check2" ng-init="check2=false">
+		          Step 2: Site Registration
+		        </md-checkbox>
+
+		        <md-checkbox ng-disabled="true" aria-label="Disabled checked checkbox" ng-model="check3" ng-init="check3=false">
+		          Step 3: Activation
+		        </md-checkbox>
+			</div>
+
+			<div class="md-padding" flex flex-gt-md="66" layout="column" ui-view>
+				
+			</div>
+
+		</div>
+
+	</div>
+
+	<div flex></div>
+
+</section>

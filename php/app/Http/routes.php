@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix'=>'new-site', 'middleware'=>'guest'], function() {
+	Route::get('check-site-name', 'CreateSiteController@checkSiteName');
+});

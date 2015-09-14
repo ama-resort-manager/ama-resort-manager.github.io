@@ -5,8 +5,11 @@
 
     <!-- CSS animations -->
     <link rel="stylesheet" type="text/css" href="/assets/css/animations/view-slide-in.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/animations/animate-switch.css">
 
     <meta name="viewport" content="initial-scale=1" />
+
+    <base href="/">
   </head>
   <body layout="column" ng-controller="mainController">
 
@@ -15,7 +18,7 @@
         <md-button ng-show="showSideNav" ng-click="toggleSidenav('left')" hide-gt-lg class="md-icon-button">
           <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
         </md-button>
-        <h1>Resort Manager</h1>
+        <h1><a ui-sref="home">Resort Manager</a></h1>
       </div>
     </md-toolbar>
 
@@ -50,6 +53,7 @@
     <!-- Angular controllers -->
     <script src="/app/mainController.js"></script>
     <script src="/app/components/home/homeController.js"></script>
+    <script src="/app/components/home/new-site/newSiteController.js"></script>
 
   </body>
 </html>

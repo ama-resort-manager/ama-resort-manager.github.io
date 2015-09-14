@@ -2,6 +2,10 @@
 =            color themes            =
 ====================================*/
 
+body {
+	background-color: #EEEEEE;
+}
+
 .bg-white {
 	background-color: #fff;
 }

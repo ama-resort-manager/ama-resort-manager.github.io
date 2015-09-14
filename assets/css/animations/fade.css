@@ -1,0 +1,20 @@
+.animate-switch-container {
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}

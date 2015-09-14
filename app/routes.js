@@ -1,4 +1,4 @@
-app.config(['$stateProvider', function($stateProvider) {
+app.config(['$stateProvider','$locationProvider', function($stateProvider,$locationProvider) {
 
     $stateProvider
       //
@@ -9,6 +9,21 @@ app.config(['$stateProvider', function($stateProvider) {
         templateUrl: '/app/components/home/home.html',
         controller: 'homeController'
       })
+      .state('home.slash', {
+        url: '/',
+        templateUrl: '/app/components/home/home.html',
+        controller: 'homeController'
+      })
+      
+      .state('newSite', {
+        url: '/new-site',
+        templateUrl: '/app/components/home/new-site/new-site.html',
+        controller: 'newSiteController'
+      })
+      .state('newSite.step1', {
+        url: '/step1',
+        templateUrl: '/app/components/home/new-site/step1.html'
+      })
       
 
       //
@@ -17,6 +32,10 @@ app.config(['$stateProvider', function($stateProvider) {
       
 
       ;
+
+      // use the HTML5 History API
+      $locationProvider.html5Mode(true);
+
 
     function guest($q, $http) {
       var deferred = $q.defer();

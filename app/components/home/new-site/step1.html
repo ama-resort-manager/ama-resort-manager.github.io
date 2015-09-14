@@ -1,0 +1,87 @@
+<div layout="row" layout-align="center center">
+	
+	<md-button class="md-primary md-raised" ng-click="step1.action = 'Login'">Login</md-button>
+
+	<div>OR</div>
+
+	<md-button class="md-primary md-hue-1 md-raised" ng-click="step1.action = 'Register'">Register</md-button>
+
+</div>
+
+<div layout="row">
+	<div class="md-padding" flex>
+		<md-divider></md-divider>
+	</div>
+
+	<p class="md-caption" ng-bind="step1.action"></p>
+
+	<div class="md-padding" flex>
+		<md-divider></md-divider>
+	</div>
+</div>
+
+<div class="animate-switch-container md-padding" ng-switch on="step1.action" class="animate-switch">
+
+	<md-whiteframe class="md-whiteframe-z1 animate-switch" ng-switch-when="Login" layout="column" style="background-color:#fff;">
+	  	<md-input-container class="md-padding">
+			<label>email</label>
+			<input type="text" />
+		</md-input-container>
+
+		<md-input-container class="md-padding">
+			<label>password</label>
+			<input type="password" />
+		</md-input-container>
+
+		<div layout layout-align="end">
+			<md-button class="md-accent md-raised" aria-label="send">
+		        <md-icon md-svg-icon="/assets/bower_components/material-design-icons/content/svg/production/ic_send_48px.svg"></md-icon>
+		        login
+		    </md-button>
+		</div>
+	</md-whiteframe>
+
+	<md-whiteframe class="md-whiteframe-z1 animate-switch md-padding" ng-switch-when="Register" layout="column" style="background-color:#fff;">
+		<h5 class="md-subhead">Credentials</h5>
+	  	<md-input-container>
+			<label>email</label>
+			<input type="text" />
+		</md-input-container>
+
+		<md-input-container>
+			<label>password</label>
+			<input type="password" />
+		</md-input-container>
+
+		<md-input-container>
+			<label>confirm password</label>
+			<input type="password" />
+		</md-input-container>
+
+		<h5 class="md-subhead">Personal Information</h5>
+		<md-input-container>
+			<label>First Name</label>
+			<input type="text" />
+		</md-input-container>
+
+		<md-input-container>
+			<label>Last Name</label>
+			<input type="text" />
+		</md-input-container>
+
+		<md-input-container>
+	        <label>Gender</label>
+	        <md-select ng-model="step1.register">
+	          	<md-option ng-repeat="gender in genders" value="{{gender}}" ng-bind="gender"></md-option>
+	        </md-select>
+      	</md-input-container>
+
+		<div layout layout-align="end">
+			<md-button class="md-accent md-raised" aria-label="send">
+		        <md-icon md-svg-icon="/assets/bower_components/material-design-icons/content/svg/production/ic_send_48px.svg"></md-icon>
+		        login
+		    </md-button>
+		</div>
+	</md-whiteframe>
+	
+</div>
